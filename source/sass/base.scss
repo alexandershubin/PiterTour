@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  font-family: $montserrat;
+  font-size: 14px;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  background-color: #5CC5B1;
+  color: $body-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  outline: none;
+  transition: ease-in-out 0.2s;
+  border: none;
+
+  &:hover {
+    opacity: 0.5;
+    transition: ease-in-out 0.2s;
+  }
+}
+
