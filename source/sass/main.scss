@@ -27,24 +27,55 @@
 .main {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  margin: 20px 0;
 
   &__block {
-    background: url("../img/box-background.png") no-repeat;
+    background: linear-gradient(360deg, #6ED4FF 1.75%, #8FFFA3 95.51%);
+    mix-blend-mode: normal;
+    border-radius: 43px;
     background-size: cover;
     display: flex;
     justify-content: space-between;
-    border-radius: 41px;
+    position: relative;
+    overflow: hidden;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      background: $white;
+      mix-blend-mode: normal;
+      opacity: 0.25;
+      border-radius: 55px;
+      z-index: 0;
+    }
+
+    &:before {
+      width: 26%;
+      height: 45%;
+      left: -4%;
+      top: -6%;
+    }
+
+    &:after {
+      width: 29%;
+      height: 47%;
+      right: 30%;
+      bottom: 61px;
+    }
   }
 }
 
 .login {
+  position: relative;
   max-width: 594px;
   width: 100%;
   background: rgba(255, 255, 255, 0.43);
   border-radius: 41px;
   padding-top: 38px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 
   &__background {
     padding-top: 46px;
@@ -178,6 +209,32 @@
   justify-content: center;
   background: url("../img/shopping_cart.png") no-repeat;
   background-position: 89% 15%;
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    background: $white;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    border-radius: 55px;
+    z-index: 0;
+  }
+
+  &:before {
+    width: 32%;
+    height: 27%;
+    left: -8%;
+    top: 19%;
+  }
+
+  &:after {
+    width: 46%;
+    height: 32%;
+    right: 36px;
+    bottom: -7%;
+  }
 
   &__content {
     padding: 50px 76px;
@@ -208,6 +265,11 @@
       flex-direction: column;
       margin: 30px 0;
       background: #8FFFA3;
+
+      &:before,
+      &:after {
+        content: none;
+      }
     }
   }
 
@@ -220,6 +282,10 @@
 
   .welcome {
     background-position: 20px 20px;
+    &:before,
+    &:after {
+      content: none;
+    }
 
     &__content {
       text-align: center;
@@ -248,4 +314,11 @@
 
 .button__form:disabled {
   opacity: 0.4;
+}
+
+
+@media(min-width: 1441px) {
+  .main {
+    height: 100vh;
+  }
 }
