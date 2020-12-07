@@ -27,8 +27,8 @@
 .main {
   display: flex;
   align-items: center;
-  height: 100%;
-  margin: 20px 0;
+  height: 100vh;
+  overflow: hidden;
 
   &__block {
     background: linear-gradient(360deg, #6ED4FF 1.75%, #8FFFA3 95.51%);
@@ -314,11 +314,4 @@
 
 .button__form:disabled {
   opacity: 0.4;
-}
-
-
-@media(min-width: 1441px) {
-  .main {
-    height: 100vh;
-  }
 }
